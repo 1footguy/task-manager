@@ -10,7 +10,8 @@ export default function Signup() {
   const navigate = useNavigate();
   const { handleSubmit, register, reset } = useForm();
 
-  async function newUser() {
+  async function newUser(data) {
+    const {email, password} = data
     try {
       await signUp(email, password);
       reset();
