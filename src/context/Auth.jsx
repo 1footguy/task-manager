@@ -4,7 +4,6 @@ import { userLogged } from "../firebase/authentication";
 const AuthContext = createContext();
 
 
-// permissão para acessar o contexto
 function AuthProvider( { children } ){
 
     const [carregando, setCarregando] = useState(true);
@@ -27,7 +26,7 @@ function AuthProvider( { children } ){
         </AuthContext.Provider>
     )
 }
-// permite acessar os estados e funções fornecidos pelo contexto
+
 function useAuth(){
     return useContext(AuthContext);    
 }
