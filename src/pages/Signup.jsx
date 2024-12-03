@@ -28,7 +28,7 @@ export default function Signup() {
       <main
         style={{ flexGrow: 1, justifyItems: "center", alignContent: "center" }}
       >
-        <h1>Cadastre-se</h1>
+        <h1 className="text-white">Cadastre-se</h1>
         <form
           onSubmit={handleSubmit(newUser)}
           style={{ display: "flex", flexDirection: "column", width: "40%" }}
@@ -45,7 +45,7 @@ export default function Signup() {
           <label htmlFor="password">Senha </label>
           <input type="password" id="password" {...register("password")} />
 
-          <Button type="submit">Criar</Button>
+          <Button type="submit" variant="dark" className="mt-2">Criar</Button>
         </form>
       </main>
       <Footer />

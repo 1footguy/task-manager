@@ -58,7 +58,7 @@ export default function Login() {
                             minLength: 6
                         })}/>
 
-                    <Button style={{width:'200px', alignSelf: 'center', marginTop: '10px'}} type="submit" variant="outline-dark">Entrar</Button>
+                    <Button style={{width:'200px', alignSelf: 'center', marginTop: '10px'}} type="submit" variant="outline-light">Entrar</Button>
                     <Button style={{width:'200px', alignSelf: 'center', marginTop: '10px'}} type="button" variant="dark" onClick={entrarGoogle}>Entrar com Google</Button>
                 </form>
                 </main>
