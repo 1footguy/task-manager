@@ -22,7 +22,7 @@ export default function Task(props) {
   }
 
   return (
-    <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
       <Modal4Update
         toggleForm={() => setEditFormVisible(!editFormVisible)}
         show={editFormVisible}
@@ -33,11 +33,14 @@ export default function Task(props) {
       <Card
         style={{
           display: "flex",
-          width: "16rem",
-          height: "16rem",
-          flexWrap: "wrap",
+          minWidth: "16rem",
+          minHeight: "18rem",
+          maxWidth: "16rem",
+          maxHeight: "20rem",
+          flexDirection: "column",
+          overflow: "hidden"
         }}
-        className="m-5"
+        className="m-5 shadow-sm"
       >
         <Card.Body className="d-flex flex-column justify-content-between">
         <input type="hidden" value={props.task.id} name="taskId" />
@@ -46,7 +49,7 @@ export default function Task(props) {
           <Card.Text>
             {props.task.status === "true" ?<span>Status: <em>Concluido</em></span> : <span>Status: <em>Em andamento</em></span>}
           </Card.Text>
-          <div className="d-flex gap-3 justify-content-center">
+          <div className="d-flex flex-column flex-md-row gap-3 justify-content-center">
             <Button variant="outline-success" onClick={choosenTask}> Editar </Button>
             <Button variant="danger" onClick={removeTask}> Excluir </Button>
           </div>

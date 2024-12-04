@@ -13,10 +13,12 @@ export default function Header(props) {
         <>
           <MyModal {...props} />
     
-          <Navbar bg="dark" data-bs-theme="dark">
-            <Container>
+          <Navbar bg="dark" data-bs-theme="dark" expand="lg">
+            <Container fluid style={{maxWidth: '82%'}}>
               <Navbar.Brand>Tasks to-do</Navbar.Brand>
-              <Nav className="ml-auto gap-4 tracking-wider">
+              <Navbar.Toggle aria-controls="navbar-nav" className="mb-2"/>
+              <Navbar.Collapse id="navbar-nav">
+              <Nav className="ms-auto gap-4 tracking-wider">
                 {(!autenticado) ? (
                   <>
                     <Link to="/login" className="nav-link">Login</Link>
@@ -32,6 +34,7 @@ export default function Header(props) {
                   </>
                 )}
               </Nav>
+              </Navbar.Collapse>
             </Container>
           </Navbar>
         </>

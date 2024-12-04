@@ -43,9 +43,9 @@ export default function Login() {
   return (
     <>
           <Header />
-            <main className="flex-grow-1 align-items-center d-flex flex-column justify-content-center">
-                <h1 className="text-white">Acesse sua conta</h1>
-                <form onSubmit={handleSubmit(enviarForm)} className="d-flex flex-column w-50 ">
+            <main className="flex-grow-1 align-items-center d-flex flex-column justify-content-center text-light">
+                <h1>Acesse sua conta</h1>
+                <form onSubmit={handleSubmit(enviarForm)} style={{ display: "flex", flexDirection: "column", width: "40%" }}>
                         <label htmlFor="email">Email </label>
                         <input type="email" id="email" autoComplete="off" {...register('email', {
                             required: true,

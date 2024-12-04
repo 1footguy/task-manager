@@ -25,10 +25,8 @@ export default function Signup() {
   return (
     <>
       <Header />
-      <main
-        style={{ flexGrow: 1, justifyItems: "center", alignContent: "center" }}
-      >
-        <h1 className="text-white">Cadastre-se</h1>
+      <main className="flex-grow-1 align-items-center d-flex flex-column justify-content-center text-light">
+        <h1>Cadastre-se</h1>
         <form
           onSubmit={handleSubmit(newUser)}
           style={{ display: "flex", flexDirection: "column", width: "40%" }}
