@@ -22,7 +22,7 @@ export default function Task(props) {
   }
 
   return (
-    <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center" style={{maxHeight: "20rem"}}>
+    <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center" style={{maxHeight: "20rem", marginTop: '0'}}>
       <Modal4Update
         toggleForm={() => setEditFormVisible(!editFormVisible)}
         show={editFormVisible}
@@ -30,15 +30,15 @@ export default function Task(props) {
         onHide={() => setEditFormVisible(false)}
         edit={edit}
       />
-      <Card
+      <Card fluid
         style={{
           display: "flex",
-          minWidth: "13rem",
+          minWidth: "17rem",
           minHeight: "18rem",
-          maxWidth: "16rem",
+          maxWidth: "18rem",
           maxHeight: "20rem",
           flexDirection: "column",
-          overflow: "hidden"
+          overflow: 'hidden',
         }}
         className="m-5 shadow-sm"
       >
