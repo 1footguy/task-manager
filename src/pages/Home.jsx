@@ -37,8 +37,8 @@ export default function Home() {
         show={formVisible}
         addTask={addTask}
       />
-      <main className="flex-grow-1 row g-3" >
-        {tasks.map((task) => <Task task={task} key={task.id} listTasks={listTasks} style={{ minHeight: "calc(100vh - 140px)", paddingBottom: "80px" }} /> )}
+      <main className="flex-grow-1 row g-3" style={{ paddingBottom: '7vh'}} >
+        {tasks.map((task) => <Task task={task} key={task.id} listTasks={listTasks}  /> )}
       </main>
       <Footer />
     </>

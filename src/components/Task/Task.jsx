@@ -22,7 +22,7 @@ export default function Task(props) {
   }
 
   return (
-    <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+    <div className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center" style={{maxHeight: "20rem"}}>
       <Modal4Update
         toggleForm={() => setEditFormVisible(!editFormVisible)}
         show={editFormVisible}
@@ -33,7 +33,7 @@ export default function Task(props) {
       <Card
         style={{
           display: "flex",
-          minWidth: "16rem",
+          minWidth: "13rem",
           minHeight: "18rem",
           maxWidth: "16rem",
           maxHeight: "20rem",
