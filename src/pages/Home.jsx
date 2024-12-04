@@ -7,11 +7,13 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Modal4Update from "../components/Modal/Modal4Update";
 import Task from "../components/Task/Task";
+import { useForm } from "react-hook-form";
 
 export default function Home() {
   const [tasks, setTasks] = useState([]);
   const [formVisible, setFormVisible] = useState(false);
   const { autenticado } = useAuth();
+  const { reset } = useForm();
 
   if (!autenticado) return <Navigate to="/login" />; 
 
@@ -19,6 +21,7 @@ export default function Home() {
     await newTask(data);
     listTasks();
     setFormVisible(false);
+    reset();
   }
 
   async function listTasks() {
