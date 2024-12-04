@@ -14,7 +14,7 @@ export default function Header(props) {
           <MyModal {...props} />
     
           <Navbar bg="dark" data-bs-theme="dark" expand="lg">
-            <Container fluid style={{maxWidth: '82%'}}>
+            <Container style={{maxWidth: '82%'}}>
               <Navbar.Brand>Tasks to-do</Navbar.Brand>
               <Navbar.Toggle aria-controls="navbar-nav" className="mb-2"/>
               <Navbar.Collapse id="navbar-nav">
